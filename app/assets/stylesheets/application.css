@@ -14,12 +14,3 @@
  *= require_self
  */
 
-.navbar-dark .navbar-nav .nav-link {
-  color: #ffffff !important; 
- 
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-  color: #cccccc !important; 
-}
-
