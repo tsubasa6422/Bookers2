@@ -59,3 +59,4 @@ gem 'devise'
 gem 'bootstrap','~>5.3'
 gem 'kaminari'
 gem 'font-awesome-sass'
+gem "image_processing","~> 1.2"

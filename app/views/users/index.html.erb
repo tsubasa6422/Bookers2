@@ -1,0 +1,43 @@
+<div class="container px-5 px-sm-0">
+  <div class="row">
+    <aside class="col-md-3">
+      <%= render "shared/sidebar" %>
+    </aside>
+    <main class="col-md-8 offset-md-1">
+      <h2>Books</h2>
+      <table class="table table=hover table-inverse">
+        <thead>
+          <tr>
+            
+            <th>image</th>
+            <th>name</th>
+            <th> </th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td>
+                <% if current_user.profile_image.attached? %>
+                  <%= image_tag current_user.profile_image.variant(resize_to_fill: [80, 80]), class: "rounded " %>
+                <% else %>
+                  <div class="bg-light border rounded " style="width:80px;height:80px;margin:0;">NO IMAGE</div>
+                <% end %>
+              </td>
+
+              
+              <td><%= user.name %></td>
+              <td><%= link_to "show", user_path(user) %></td>
+
+              
+            </tr>
+          <% end %>
+        </tbody>
+
+      </table>
+
+    </main>
+  </div>
+</div>
