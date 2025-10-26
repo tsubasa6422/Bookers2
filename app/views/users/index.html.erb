@@ -30,7 +30,7 @@
                 <% if user.profile_image.attached? %>
                   <%= image_tag user.profile_image.variant(resize_to_fill: [80, 80]), class: "rounded " %>
                 <% else %>
-                  <div class="bg-light border rounded " style="width:80px;height:80px;margin:0;">NO IMAGE</div>
+                  <%=image_tag "no_image.jpg", width:80, height:80, alt: "" %>
                 <% end %>
               </td>
 
